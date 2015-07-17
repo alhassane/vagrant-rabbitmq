@@ -1,0 +1,25 @@
+# Use CentOS 7 (64-bit) box
+$box_name = "precise64"
+$box_url = "http://files.vagrantup.com/precise64.box"
+ 
+# VM settings
+$vm_hostname = "dev.sfynx.vagrant"
+
+# VM configuration and capacities
+$vm_group = "/vagrant"
+$vm_www_point = "/var/www"
+
+$vm_name = "RABBIT"
+$vm_ip = "192.168.33.40"
+
+$vm1_ip = "192.168.33.41"
+$vm1_name = "rabbit1"
+$vm1_port = 10011
+
+$vm2_ip = "192.168.33.42"
+$vm2_name = "rabbit2"
+$vm2_port = 10012
+
+$vm3_ip = "192.168.33.43"
+$vm3_name = "rabbit3"
+$vm3_port = 10013
