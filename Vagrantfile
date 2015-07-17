@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             rabbit_config.vm.hostname = node[:name]
             rabbit_config.vm.synced_folder ".",  $vm_group, id: "vagrant-root", :nfs => true
             rabbit_config.vm.synced_folder "./", $vm_www_point, create: false, type: "nfs
-            rabbit_config.vm.network :forwarded_port, guest: 15672, host: node[:mgmt_port]
+            rabbit_config.vm.network :forwarded_port, guest: 5672, host: node[:mgmt_port]
             rabbit_config.vm.network :private_network, ip: node[:ip]
             rabbit_config.vm.provision :shell, :path => "provisioners/shell/bootstrap.sh"
         end
